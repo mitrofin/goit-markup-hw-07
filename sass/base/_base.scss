@@ -1,7 +1,7 @@
 body,
 button,
 a {
-  font-family: Roboto, sans-serif;
+  font-family: $font-family;
   font-style: normal;
   color: $text-color;
   font-size: 14px;
@@ -183,12 +183,12 @@ outer-box {
   display: flex;
   justify-content: center;
   margin-top: 16px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $transition;
 }
-box-social {
+
+.box-social {
   width: 44px;
   height: 44px;
-  /* padding: 12px; */
   margin-bottom: 24px;
   display: inline-flex;
   justify-content: center;
@@ -197,6 +197,7 @@ box-social {
   border-radius: 50%;
   transition: $transition;
 }
+
 .line/* :not(:last-child) */ {
   margin-right: 10px;
 }
@@ -247,7 +248,7 @@ box-social {
   justify-content: center;
   transition: $transition;
   &:hover {
-    --color1: $accent-color;
+    --colo1: $accent-color;
     background-color: $second-color;
     border: 1px solid $accent-color;
   }
@@ -256,12 +257,13 @@ box-social {
   width: 45px;
   height: 50px;
   transition: $transition;
-  fill: currentColor;
+  fill: $accent-color;
 }
 
-.box-client .last:not(:last-child) {
+.last:not(:last-child) {
   margin-right: 30px;
 }
+
 .round {
   background-color: #515261;
   opacity: 90%;

@@ -1,4 +1,4 @@
-.hed > .nav {
+.nav {
   color: $main-color;
   list-style: none;
   font-weight: 500;
@@ -8,14 +8,14 @@
   font-style: normal;
   padding-bottom: 32px;
   transition: transition;
-}
-.nav:focus {
-  background-color: transparent;
-}
 
-.nav:hover {
-  color: $accent-color;
-  outline: none;
+  &:hover {
+    color: $accent-color;
+    outline: none;
+  }
+  &:focus {
+    background-color: transparent;
+  }
 }
 
 .nav-border {
