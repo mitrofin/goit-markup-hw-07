@@ -1,3 +1,9 @@
+%centerFlex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 footer {
   background-color: #2f303a;
 }
@@ -25,9 +31,7 @@ footer {
   transition: $transition;
 }
 .developed {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %centerFlex;
   width: 1170px;
   padding-top: 18px;
   padding-bottom: 18px;
@@ -53,8 +57,18 @@ footer {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: #2f303a;
-  /* font-family: inherit;
-  font-size: normal; */
   color: $second-color;
-  /* margin-top: 20px;  */
+  
 }
+.container > .footer-main {
+  min-height: 197px;
+}
+.white-style {
+  color: $second-color;
+}
+.round {
+  background-color: #515261;
+  opacity: 90%;
+  border-radius: 50%;
+}
+

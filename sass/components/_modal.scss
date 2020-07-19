@@ -1,15 +1,25 @@
+%centerFlex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .name {
   font-style: Roboto;
   font-size: 16px;
   line-height: 1.35em;
   color: $main-color;
   font-weight: 500;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 0;
   margin-bottom: 0;
   border-radius: 2px;
   text-align: center;
+}
+textarea {
+  resize: none;
+  height: 120px;
 }
 .backdrop {
   position: fixed;
@@ -20,12 +30,10 @@
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 10;
   opacity: 1;
-  /* visibility: visible; */
   transition: $transition;
 }
 
 .backdrop.is-hidden {
-  /* visibility: hidden; */
   opacity: 0;
   pointer-events: none;
 }
@@ -36,7 +44,6 @@
 .modal {
   position: absolute;
   width: 528px;
-  /* height: 581px; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1) translateY(0);
@@ -46,18 +53,13 @@
   border-radius: 4px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
-  /* display: flex;
-  align-items: center; */
 }
 .speaker-form {
-  /* display: block; */
-  /* justify-content: center; */
   text-align: center;
   position: relative;
 }
 .form-field {
   margin-top: 28px;
-  /* padding: 12px 42px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,9 +80,7 @@
   right: 8px;
   top: 8px;
   background-color: $second-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %centerFlex;
   cursor: pointer;
 }
 .close::after {
@@ -216,12 +216,9 @@
   width: 16px;
   height: 15px;
   background: #ffffff;
-  /* background-image: url(../images/cub.svg);
-  background-size: contain;
-  background-position: center; */
   border: 2px solid $main-color;
   border-radius: 4px;
-  /* outline:transparent; */
+  
 }
 .checkbox:checked::after {
   border-color: transparent;

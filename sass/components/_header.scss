@@ -6,8 +6,7 @@
   line-height: 1.14em;
   letter-spacing: 0.02em;
   font-style: normal;
-  padding-bottom: 32px;
-  transition: transition;
+    transition: transition;
 
   &:hover {
     color: $accent-color;
@@ -22,12 +21,13 @@
   display: inline-block;
   position: relative;
   transition: $transition;
+  
 }
 .nav-border::after {
   transition: $transition;
 }
 .nav-border:hover::after {
-  content: '';
+  content:'';
   position: absolute;
   left: 0;
   bottom: 0;
@@ -36,19 +36,15 @@
   border-radius: 2px;
   background-color: $transition;
 }
-.info {
-  display: flex;
-  padding-right: 0;
-  margin-bottom: 0;
-  text-align: left;
-}
+
 .link-nav {
   margin-left: 85px;
+  &-size {
+    display: flex;
+    margin-left: auto;
+  }
 }
-.link-nav-size {
-  display: flex;
-  margin-left: auto;
-}
+
 .hed:not(:last-child) {
   margin-right: 40px;
 }
@@ -58,26 +54,29 @@
     padding-bottom: 32px;
   }
 }
-
 .addres:not(:last-child) {
   margin-right: 30px;
 }
 .icon-vectorsmartphone {
-  /* --color2: var(--text-color); */
-  /* fill: var(--text-color); */
+  --color2: currentcolor;
   margin-right: 10px;
+  
 }
 .addres:hover .icon-vectorsmartphone {
-  --color2: $accent-color;
+  color: $accent-color;
 }
 
 .icon-envelope {
-  /*  fill: var(--text-color); */
+  --color2: currentcolor;
   margin-right: 10px;
 }
-.addres:hover .icon-envelope {
-  --color2: $accent-color;
+.addres{
+  color: $text-color;
+ &:hover .icon-envelope {
+    color: $accent-color;
+  }
 }
+
 .menu {
   display: flex;
   align-items: center;
