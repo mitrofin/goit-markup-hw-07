@@ -21,22 +21,23 @@
   display: inline-block;
   position: relative;
   transition: $transition;
-  
-}
-.nav-border::after {
-  transition: $transition;
-}
-.nav-border:hover::after {
-  content:'';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 5px;
-  border-radius: 2px;
-  background-color: $transition;
-}
+  padding-top: 32px;
+  padding-bottom: 32px;
+  &::after {
+    transition: $transition;
+  }
+  &:hover::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
 
+}
 .link-nav {
   margin-left: 85px;
   &-size {
@@ -47,12 +48,6 @@
 
 .hed:not(:last-child) {
   margin-right: 40px;
-}
-.hed {
-  .a {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
 }
 .addres:not(:last-child) {
   margin-right: 30px;
@@ -83,3 +78,7 @@
   height: 80px;
   border-bottom: 1px solid #ececec;
 }
+.current-studio:read-only {
+  color: $accent-color;
+}
+
